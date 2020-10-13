@@ -1,12 +1,14 @@
 const express  = require('express');
-const cors = require('cors');
-const mongoose = require('mongoose');
+const cors = require('cors'); //it is middleware to used to create web server
+const mongoose = require('mongoose'); // use to create models 
 
+//for dotenv file configuration
 require('dotenv').config();
 
 const app = express();
 const port =  process.env.PORT || 5000;
 
+//middlewares
 app.use(cors());
 app.use(express.json());
 
@@ -18,11 +20,17 @@ connection.once('open',()=>{
     console.log("Mongo DB connection successfull");
 });
 
+//routing variables 
 const indexRouter = require('../api-routes/index');
 app.use('/',indexRouter);
 
 const usersRouter = require('../api-routes/users');
 app.use('/users',usersRouter);
+
+//404 page if url not found
+app.use('*', (req,res)=>{
+    res.send("404 Page not Found !");
+});
 
 //starting the server on port 5000
 app.listen(port, () => {
