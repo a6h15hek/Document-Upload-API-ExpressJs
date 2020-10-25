@@ -1,12 +1,12 @@
 {
-  "name": "newinqueapi",
+  "name": "ExpressJS API template",
   "version": "1.0.0",
-  "description": "Text Based Social Media",
+  "description": "A template",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./config/server"
   },
-  "author": "a6h15hek",
+  "author": "Abhishek Yadav",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
