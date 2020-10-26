@@ -27,6 +27,9 @@ app.use('/',indexRouter);
 const usersRouter = require('../api-routes/users');
 app.use('/users',usersRouter);
 
+const documentRouter = require('../api-routes/document');
+app.use('/document',documentRouter);
+
 //404 page if url not found
 app.use('*', (req,res)=>{
     res.send("404 Page not Found !");
