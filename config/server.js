@@ -20,6 +20,7 @@ connection.once('open',()=>{
     console.log("Mongo DB connection successfull");
 });
 
+app.use('/uploads', express.static('uploads'));
 //routing variables 
 const indexRouter = require('../api-routes/index');
 app.use('/',indexRouter);

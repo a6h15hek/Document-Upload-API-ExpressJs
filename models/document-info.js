@@ -2,12 +2,18 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const documentSchema = new Schema({
-    docname : {
+    documentId : {
+        type: String,
+        required : true,
+        trim : true,
+        unique : true
+    },
+    auther : {
         type: String,
         required : true,
         trim : true
     },
-    auther : {
+    filename : {
         type: String,
         required : true,
         trim : true

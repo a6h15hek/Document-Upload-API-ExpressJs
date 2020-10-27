@@ -1,3 +1,3 @@
-# ExpressJS-Template
+# Image Upload API
 
-This is template for making express JS Projects. 
+
