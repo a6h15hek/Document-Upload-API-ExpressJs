@@ -1,7 +1,8 @@
 const router = require('express').Router();
 let DocumentInfo = require('../models/document-info');
-//const processImage = require('../services/image-crop');
+
 const multer = require('multer');
+
 const storage = multer.diskStorage({
     destination : function(req, file, cb){
         cb(null,"./uploads/");
@@ -50,6 +51,11 @@ router.route('/').get((req,res) => {
             });
         });
 });
+
+router.route("/get").get((req,res) => {
+    res.send("<h1 id='mytext'>Abhishe</h1>")
+    document.getElementById("mytext").innerHTML = "abh"
+})
 
 router.route("/:documentId").get((req,res) => {
     const docId = req.params.documentId;
@@ -102,7 +108,6 @@ router.route('/upload').post(upload.single('documentimage'),(req,res) => {
     .catch(err => res.status(400).json({
         message : err
     }));
-    //processImage.processImage(filename);
 });
 
 module.exports = router;
