@@ -21,7 +21,7 @@ connection.once('open',()=>{
     console.log("Mongo DB connection successfull");
 });
 
-app.use('/uploads', express.static('uploads'));
+app.use('/uploads', express.static('uploads/1604139440960-1-Capture0.PNG'));
 //routing variables 
 const indexRouter = require('../api-routes/index');
 app.use('/',indexRouter);
@@ -32,8 +32,10 @@ const usersRouter = require('../api-routes/users');
 app.use('/users',usersRouter);
 
 const documentRouter = require('../api-routes/document');
-const nodemon = require('nodemon');
 app.use('/document',documentRouter);
+
+const adminRouter = require('../api-routes/admin');
+app.use('/admin',adminRouter);
 
 
 
@@ -56,7 +58,7 @@ function callName(req, res) {
     // E.g : http://localhost:3000/name?firstname=Mike&lastname=Will 
     // so, first name = Mike and last name = Will 
     //var process = spawn('python', ["D:/Software/WorkSpace/Project_Hackathon/govtechthon2020/ImageProcess/api-routes/hello.py", "abhishek", "yadav"]  ); 
-    var process = spawn('python', ["-u",path.join(__dirname, '../py/hello.py'), "--image", "images/page.jpg"]  ); 
+    var process = spawn('python', ["-u",path.join(__dirname, '../py/imageprocess.py'), "--image", "images/page.jpg"]  ); 
 
     // Takes stdout data from script which executed 
     // with arguments and send this data to res object 

@@ -1,36 +1,36 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const documentSchema = new Schema({
-    documentId : {
-        type: String,
-        required : true,
-        trim : true,
-        unique : true
-    },
-    auther : {
+const adminProfileSchema = new Schema({
+    name : {
         type: String,
         required : true,
         trim : true
     },
-    filenamearray : [],
-    clientIp : {
+    email : {
         type: String,
+        required : true,
         trim : true
     },
-    appName : {
+    password : {
+        type: String,
+        required : true,
+        trim : true
+    },
+    organization : {
         type: String,
         trim : true
     },
     authkey : {
         type: String,
         trim : true,
-        required :true
+        required : true,
+        unique : true
     }
  },{
     timestamps : true 
  }
 );
 
-const DocumentInfo = mongoose.model('document',documentSchema);
-module.exports = DocumentInfo;
+const adminProfile = mongoose.model('admin-profile',adminProfileSchema);
+module.exports = adminProfile;
