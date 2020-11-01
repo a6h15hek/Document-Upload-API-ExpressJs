@@ -32,8 +32,7 @@ router.route('/register').post((req,res) => {
     .catch(err => res.status(400).json({
         message : "Bad Request",
         error : err,
-        success : false,
-        authkey : authkey
+        success : false
     }));
 });
 
