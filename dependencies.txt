@@ -1,0 +1,12 @@
+# Dependencies
+
+* expressjs - The server for handling and routing HTTP requests
+* mongoose - For modeling and mapping MongoDB data to javascript
+* bcryptjs - A library to help you hash passwords.
+* cors - CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+* dotenv - Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in the environment separate from code is based on The Twelve-Factor App methodology.
+* ffmpeg - FFmpeg module for Node. This library provides a set of functions and utilities to abstract commands-line usage of ffmpeg. To use this library requires that ffmpeg is already installed (including all necessary encoding libraries like libmp3lame or libx264)
+* multer - Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency.
+* nodemon - nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
+* request-ip - A tiny Node.js module for retrieving a request's IP address.
+* resize-optimize-images - Resize and optimize bmp, gif, jpeg, png, & tiff images in Node.js.

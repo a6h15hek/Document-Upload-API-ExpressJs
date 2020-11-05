@@ -4,7 +4,7 @@ A Generic Independent  file/document uploading component that can be integrated 
 
 ## API Usage
 
-### Generating Authkey
+### How to generate auth key to perform Read & write operation?
 
 * **URL**
 
@@ -35,16 +35,16 @@ A Generic Independent  file/document uploading component that can be integrated 
 * **Success Response**
 
    * **Code:** 200 <br />
-    **Content:** `{ id : 12 }`
+    **Content:** `{ message : "Success", Authkey : AUTH4kjkakfjjaejfjajk2324 }`
 
 * **Error Response:**
 
-  Most endpoints will have many ways they can fail. From unauthorized access, to wrongful parameters etc. All of those should be liste d here. It might seem repetitive, but it helps prevent assumptions from being made where they should be.
+  Most endpoints will have many ways they can fail. From unauthorized access, to wrongful parameters etc. All of those should be listed here. It might seem repetitive, but it helps prevent assumptions from being made where they should be.
 
   * **Code:** 401 UNAUTHORIZED <br/>
     **Content:** `{ error : "Log in" }`
 
-    OR
+    AND
 
   * **Code:** 422 UNPROCESSABLE ENTRY <br/>
     **Content:** `{ error : "Email Invalid" }`
@@ -52,7 +52,7 @@ A Generic Independent  file/document uploading component that can be integrated 
 
 <br/><br/>
 
-### Document Upload
+### How to upload files Upload and image configuration parameters?
 
 * **URL**
 
@@ -91,21 +91,22 @@ A Generic Independent  file/document uploading component that can be integrated 
 * **Success Response**
 
    * **Code:** 200 <br />
-    **Content:** `{ id : 12 }`
+    **Content:** `{ message : "success" , DocId : DOC394890280934809 }`
 
 * **Error Response:**
 
   Most endpoints will have many ways they can fail. From unauthorized access, to wrongful parameters etc. All of those should be liste d here. It might seem repetitive, but it helps prevent assumptions from being made where they should be.
 
   * **Code:** 401 UNAUTHORIZED <br/>
-    **Content:** `{ error : "Log in" }`
+    **Content:** `{ error : "email or password not match." }`
 
-    OR
+    AND
 
   * **Code:** 422 UNPROCESSABLE ENTRY <br/>
-    **Content:** `{ error : "Email Invalid" }`
+    **Content:** `{ error : "Input not valid." }`
 
-    ### Get Files 
+    
+    ### How to get the files?
 
 * **URL**
 
@@ -139,9 +140,9 @@ A Generic Independent  file/document uploading component that can be integrated 
   Most endpoints will have many ways they can fail. From unauthorized access, to wrongful parameters etc. All of those should be liste d here. It might seem repetitive, but it helps prevent assumptions from being made where they should be.
 
   * **Code:** 401 UNAUTHORIZED <br/>
-    **Content:** `{ error : "Log in" }`
+    **Content:** `{ error : "Email or Password is invalid or you are not authorized to access this file" }`
 
     OR
 
   * **Code:** 422 UNPROCESSABLE ENTRY <br/>
-    **Content:** `{ error : "Email Invalid" }`
+    **Content:** `{ error : "inputs are not valid" }`
