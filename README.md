@@ -146,3 +146,11 @@ A Generic Independent  file/document uploading component that can be integrated 
 
   * **Code:** 422 UNPROCESSABLE ENTRY <br/>
     **Content:** `{ error : "inputs are not valid" }`
+
+
+## Contributers
+- Abhishek Yadav
+- Akshit Panday https://github.com/unscrewedakshit
+- Diksha Singh https://github.com/DikshaSingh10
+- Sarthak Chafle https://github.com/sarthakchafle
+- Vallabh Deshpande https://github.com/Vallabh43
